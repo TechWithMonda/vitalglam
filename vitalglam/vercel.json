@@ -1,6 +1,7 @@
 {
-    "rewrites": [
-      { "source": "/app/(.*)", "destination": "/$1" }
-    ]
+    "build": {
+      "env": {
+        "NODE_ENV": "production"
+      }
+    }
   }
-  

@@ -310,7 +310,7 @@ export default {
       this.loadingPosts = true;
       this.errorPosts = null;
       try {
-        const response = await axios.get('http://127.0.0.1:8000/api/posts/');
+        const response = await axios.get('https://vitalglambackend.onrender.com/api/posts/');
         this.featuredPosts = response.data;
       } catch (error) {
         this.errorPosts = 'Failed to load posts. Please try again later.';
@@ -323,7 +323,7 @@ export default {
       this.loadingProducts = true;
       this.errorProducts = null;
       try {
-        const response = await axios.get('http://127.0.0.1:8000/api/products/');
+        const response = await axios.get('https://vitalglambackend.onrender.com/api/products/');
         this.featuredProducts = response.data.map(product => ({
           ...product,
           price: parseFloat(product.price) || 0,
